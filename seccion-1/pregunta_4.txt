@@ -1,0 +1,4 @@
+4. ¿Qué diferencia hay entre INNER JOIN y LEFT JOIN en SQL?
+
+**INNER JOIN** → Devuelve solo filas que tienen coincidencia en ambas tablas.  
+**LEFT JOIN** → Devuelve todas las filas de la tabla izquierda, y las coincidencias de la derecha (o `NULL` si no hay coincidencia).

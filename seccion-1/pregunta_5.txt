@@ -1,0 +1,16 @@
+5. ¿Qué es una condición falsy? Da tres ejemplos en PHP y JavaScript.
+
+
+Un valor *falsy* es aquel que se evalúa como `false` en un contexto booleano.
+
+**PHP:**
+- 0
+- "" (cadena vacía)
+- null
+(También: false, "0", array())
+
+**JavaScript:**
+- 0
+- "" (cadena vacía)
+- null
+(También: undefined, NaN, false)

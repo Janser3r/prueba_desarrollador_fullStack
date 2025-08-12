@@ -1,0 +1,5 @@
+¿Qué consideras una buena práctica que aplicas siempre en tus desarrollos y por qué?
+
+Definir y respetar contratos claros desde el inicio (DTOs, validaciones de datos y especificaciones de endpoints).  
+Esto previene ambigüedades, reduce errores y facilita pruebas y mantenimiento.
+

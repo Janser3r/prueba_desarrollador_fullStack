@@ -1,0 +1,9 @@
+1. ¿Cuál es la diferencia entre '==' y '===' en PHP?
+
+
+`==` compara solo el valor, permitiendo conversión de tipos (*type juggling*).  
+`===` compara valor **y** tipo, sin conversión.
+
+Ejemplo:
+0 == "0"     // true  
+0 === "0"    // false (uno es entero, el otro string)

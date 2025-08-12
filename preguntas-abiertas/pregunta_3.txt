@@ -1,0 +1,5 @@
+En informática y en específico en desarrollo de software, ¿qué es lo más importante antes de iniciar el desarrollo?
+
+Entender completamente los requerimientos: objetivos, restricciones, casos de uso, riesgos y criterios de aceptación.  
+Definir un plan de trabajo y un alcance (MVP "Producto Minimo Viable") claros para evitar retrabajo y sobrecostos.
+

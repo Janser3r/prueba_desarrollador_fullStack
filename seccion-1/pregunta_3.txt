@@ -1,0 +1,6 @@
+3. ¿Qué hace .on('click', ...) comparado con .click() en jQuery?
+
+
+`.on('click', handler)` → Asigna un manejador de evento, soporta *delegación* y funciona para elementos dinámicos creados después.  
+`.click(handler)` → Asigna el evento solo a los elementos existentes en ese momento.  
+`.click()` sin parámetros → Dispara el evento click manualmente.

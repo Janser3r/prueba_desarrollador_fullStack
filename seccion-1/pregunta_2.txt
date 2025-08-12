@@ -1,0 +1,6 @@
+2. ¿Qué valor retorna 'NaN == NaN' en JavaScript y por qué?
+
+
+Retorna `false`.  
+En JavaScript, `NaN` es el único valor que **no es igual a sí mismo**.  
+Para comprobar si algo es `NaN`, se debe usar `Number.isNaN(valor)` o `Object.is(NaN, NaN)` que retorna `true`.

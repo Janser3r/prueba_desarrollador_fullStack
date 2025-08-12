@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS usuarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(120) NOT NULL,
+  email VARCHAR(180) NOT NULL UNIQUE,
+  fecha_registro DATETIME NOT NULL,
+  KEY idx_fecha (fecha_registro)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+

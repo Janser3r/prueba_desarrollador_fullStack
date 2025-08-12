@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ejercicio DOM – jQuery + Vanilla JS</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <h1>Interacción DOM</h1>
+  <input id="nombre" placeholder="Escribe tu nombre..." />
+  <button id="btnGuardar">Guardar</button>
+  <div id="resultado"></div>
+  <script>
+    function toUpperSafe(text) {
+      return String(text || '').toUpperCase();
+    }
+    $(document).on('click', '#btnGuardar', function () {
+      $('#resultado').text(toUpperSafe($('#nombre').val()));
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,5 @@
+¿Cuándo y por qué usar GIT y GitHub?
+
+Usar Git siempre que haya código o archivos que necesiten historial y control de versiones.  
+GitHub se utiliza para colaboración, revisión de código (pull requests), seguimiento de incidencias, automatización con CI/CD y respaldo en la nube.
+
