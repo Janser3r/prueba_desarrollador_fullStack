@@ -1,12 +1,21 @@
 <?php
-function longestWord($str) {
-    if (!is_string($str)) return "";
-    preg_match_all('/[\p{L}\p{N}]+/u', mb_strtolower($str), $matches);
-    $best = "";
-    foreach ($matches[0] as $word) {
-        if (mb_strlen($word) > mb_strlen($best)) {
-            $best = $word;
+/**
+ * Encuentra la palabra más larga de un texto.
+ * - Convierte todo a minúsculas para comparar sin distinción de mayúsculas.
+ * - Usa expresión regular sencilla para extraer palabras y números.
+ * - Si hay empate, devuelve la primera palabra más larga encontrada.
+ */
+function palabraMasLarga(string $texto): string {
+    if ($texto === '') return ''; // Si está vacío, no hay nada que procesar
+
+    // Buscar todas las palabras (incluye acentos y dígitos)
+    preg_match_all('/[A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]+/u', mb_strtolower($texto), $coincidencias);
+
+    $mejor = '';
+    foreach ($coincidencias[0] as $palabra) {
+        if (mb_strlen($palabra) > mb_strlen($mejor)) {
+            $mejor = $palabra;
         }
     }
-    return $best;
+    return $mejor;
 }

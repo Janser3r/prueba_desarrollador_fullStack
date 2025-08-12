@@ -1,24 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ejercicio DOM – jQuery + Vanilla JS</title>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Ejercicio DOM con jQuery</title>
+
+    <!-- Cargamos jQuery desde CDN oficial -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        /* Estilos simples para que se vea ordenado */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            line-height: 1.5;
+        }
+        input, button {
+            padding: 8px;
+            font-size: 14px;
+        }
+        #resultado {
+            margin-top: 15px;
+            padding: 10px;
+            min-height: 30px;
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
-  <h1>Interacción DOM</h1>
-  <input id="nombre" placeholder="Escribe tu nombre..." />
-  <button id="btnGuardar">Guardar</button>
-  <div id="resultado"></div>
-  <script>
-    function toUpperSafe(text) {
-      return String(text || '').toUpperCase();
-    }
-    $(document).on('click', '#btnGuardar', function () {
-      $('#resultado').text(toUpperSafe($('#nombre').val()));
-    });
-  </script>
+
+    <h1>Convertir texto a MAYÚSCULAS</h1>
+
+    <!-- Campo de texto para ingresar el nombre -->
+    <input type="text" id="nombre" placeholder="Escribe tu nombre aquí" />
+
+    <!-- Botón para activar la acción -->
+    <button id="btnGuardar">Guardar</button>
+
+    <!-- Div donde aparecerá el resultado -->
+    <div id="resultado"></div>
+
+    <script>
+        // Usamos jQuery para manejar el evento "click" del botón
+        $('#btnGuardar').on('click', function () {
+            // Obtenemos el valor del campo de texto usando jQuery
+            let texto = $('#nombre').val();
+
+            // Convertimos a mayúsculas usando JavaScript nativo
+            let textoEnMayusculas = texto.toString().toUpperCase();
+
+            // Mostramos el resultado en el div
+            $('#resultado').text(textoEnMayusculas);
+        });
+    </script>
+
 </body>
 </html>
-

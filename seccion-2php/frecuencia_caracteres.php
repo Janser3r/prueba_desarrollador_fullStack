@@ -1,14 +1,22 @@
 <?php
-function charFrequency($str) {
-    $freq = [];
-    $str = mb_strtolower((string)$str);
-    $len = mb_strlen($str);
-    for ($i = 0; $i < $len; $i++) {
-        $ch = mb_substr($str, $i, 1);
-        if (preg_match('/[\p{L}]/u', $ch)) {
-            $freq[$ch] = ($freq[$ch] ?? 0) + 1;
+/**
+ * Calcula la frecuencia de cada letra en una cadena.
+ * - Pasa todo a minúsculas para uniformidad.
+ * - Solo cuenta letras (ignora espacios, números y símbolos).
+ * - Devuelve un array asociativo: letra => cantidad.
+ */
+function frecuenciaLetras(string $texto): array {
+    $frecuencias = [];
+    $texto = mb_strtolower($texto);
+    $longitud = mb_strlen($texto);
+
+    for ($i = 0; $i < $longitud; $i++) {
+        $car = mb_substr($texto, $i, 1);
+        if (preg_match('/[a-záéíóúüñ]/u', $car)) {
+            // Incrementa el contador de esa letra
+            $frecuencias[$car] = ($frecuencias[$car] ?? 0) + 1;
         }
     }
-    return $freq;
-}
 
+    return $frecuencias;
+}
